@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avião</title>
+    <style>
+        @keyframes fly{
+            0%{
+               transform: translate(0);   
+            }
+            50%{
+                transform: translate(200%, -50px);
+            }
+            100%{
+               transform: translate(calc(95vw - 250px));
+            }
+
+        }
+
+        body{
+            background-image: url('./fundo-floresta.jpg');
+            background-repeat:no-repeat;
+        }
+
+        .foto{
+            
+            position: absolute;
+            left: -1%;
+             top: 54%;
+            width: 300px;
+            height: 300px;
+
+            animation: fly;
+            animation-duration: 2s;
+            animation-timing-function:linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction:initial;
+            animation-fill-mode: backwards;
+            
+            
+           
+
+        }
+     
+         .foto:hover{
+            animation-play-state: paused;
+         }
+        
+    </style>
+
+</head>
+<body>
+   <picture class="foto"><img src="./avião.png" alt="" ></picture>
+</body>
+</html>
